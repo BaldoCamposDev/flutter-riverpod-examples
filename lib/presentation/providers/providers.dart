@@ -1,3 +1,4 @@
-export 'package:riverpod_app/presentation/providers/todos_providers.dart';
-export 'package:riverpod_app/presentation/providers/state_providers.dart';
-export 'package:riverpod_app/presentation/providers/hello_world_provider.dart';
+export './todos_providers.dart';
+export './state_providers.dart';
+export './hello_world_provider.dart';
+export './future_providers.dart';
