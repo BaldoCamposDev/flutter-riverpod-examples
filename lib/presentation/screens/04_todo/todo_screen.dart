@@ -29,7 +29,7 @@ class _TodoView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final currentFilter = ref.watch(todoCurrentFilterProvider);
-    final todos = ref.watch(todosProvider);
+    final filteredTodos = ref.watch(filteredTodosProvider);
 
     return Column(
       children: [
@@ -65,9 +65,9 @@ class _TodoView extends ConsumerWidget {
         /// Listado de personas a invitar
         Expanded(
           child: ListView.builder(
-            itemCount: todos.length,
+            itemCount: filteredTodos.length,
             itemBuilder: (context, index) {
-              final todo = todos[index];
+              final todo = filteredTodos[index];
               return SwitchListTile(
                 title: Text(todo.description),
                 value: todo.done,
