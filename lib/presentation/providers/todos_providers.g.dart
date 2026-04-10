@@ -20,7 +20,7 @@ final class TodoCurrentFilterProvider
         argument: null,
         retry: null,
         name: r'todoCurrentFilterProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -41,7 +41,7 @@ final class TodoCurrentFilterProvider
   }
 }
 
-String _$todoCurrentFilterHash() => r'f709ad79fb4230defff80ee6a062ece2099a01dc';
+String _$todoCurrentFilterHash() => r'95a15b28dfb0e316a33898e3445d801049365164';
 
 abstract class _$TodoCurrentFilter extends $Notifier<FilterType> {
   FilterType build();
@@ -71,7 +71,7 @@ final class TodosProvider extends $NotifierProvider<Todos, List<Todo>> {
         argument: null,
         retry: null,
         name: r'todosProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -92,7 +92,7 @@ final class TodosProvider extends $NotifierProvider<Todos, List<Todo>> {
   }
 }
 
-String _$todosHash() => r'072c259947ac3504c484890ced77f7280913c39a';
+String _$todosHash() => r'd0ede6c83273b6f3b128732aa865db64b0b5898e';
 
 abstract class _$Todos extends $Notifier<List<Todo>> {
   List<Todo> build();
