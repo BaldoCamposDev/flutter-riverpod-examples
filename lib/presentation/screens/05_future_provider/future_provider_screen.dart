@@ -20,7 +20,9 @@ class FutureProviderScreen extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.refresh),
-        onPressed: () {},
+        onPressed: () {
+          ref.invalidate(pokemonNameProvider);
+        },
       ),
     );
   }

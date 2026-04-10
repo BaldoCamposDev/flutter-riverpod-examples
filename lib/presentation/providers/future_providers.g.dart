@@ -40,4 +40,4 @@ final class PokemonNameProvider
   }
 }
 
-String _$pokemonNameHash() => r'f330bc38ec7404d47c4fb1ef177250fd85b5465b';
+String _$pokemonNameHash() => r'f065dbacfeed1a559541755ccfd6583dd6bd1560';

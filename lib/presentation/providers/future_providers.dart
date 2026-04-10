@@ -7,5 +7,9 @@ part 'future_providers.g.dart';
 Future<String> pokemonName(Ref ref) async {
   final pokemonName = await PokemonInformation.getPokemonName(1);
 
+  ref.onDispose(() {
+    print('Estamos a punto de eliminar este provider');
+  });
+
   return pokemonName;
 }
