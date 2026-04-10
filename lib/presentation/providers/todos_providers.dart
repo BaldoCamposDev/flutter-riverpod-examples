@@ -56,4 +56,16 @@ class Todos extends _$Todos {
       Todo(id: uuid.v4(), description: description, completedAt: null),
     ];
   }
+
+  void toggleTodo(String id) {
+    state = state.map((todo) {
+      if (todo.id == id) {
+        return todo.copyWith(
+          completedAt: todo.completedAt == null ? DateTime.now() : null,
+        );
+      }
+
+      return todo;
+    }).toList();
+  }
 }

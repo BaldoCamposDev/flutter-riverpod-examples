@@ -92,7 +92,7 @@ final class TodosProvider extends $NotifierProvider<Todos, List<Todo>> {
   }
 }
 
-String _$todosHash() => r'2b889217e0245c07fc7ceec9db1b4600658c3a35';
+String _$todosHash() => r'072c259947ac3504c484890ced77f7280913c39a';
 
 abstract class _$Todos extends $Notifier<List<Todo>> {
   List<Todo> build();
