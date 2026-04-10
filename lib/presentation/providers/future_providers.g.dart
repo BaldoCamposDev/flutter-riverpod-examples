@@ -92,3 +92,72 @@ abstract class _$PokemonId extends $Notifier<int> {
     element.handleCreate(ref, build);
   }
 }
+
+@ProviderFor(pokemon)
+final pokemonProvider = PokemonFamily._();
+
+final class PokemonProvider
+    extends $FunctionalProvider<AsyncValue<String>, String, FutureOr<String>>
+    with $FutureModifier<String>, $FutureProvider<String> {
+  PokemonProvider._({
+    required PokemonFamily super.from,
+    required int super.argument,
+  }) : super(
+         retry: null,
+         name: r'pokemonProvider',
+         isAutoDispose: false,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
+
+  @override
+  String debugGetCreateSourceHash() => _$pokemonHash();
+
+  @override
+  String toString() {
+    return r'pokemonProvider'
+        ''
+        '($argument)';
+  }
+
+  @$internal
+  @override
+  $FutureProviderElement<String> $createElement($ProviderPointer pointer) =>
+      $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<String> create(Ref ref) {
+    final argument = this.argument as int;
+    return pokemon(ref, argument);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is PokemonProvider && other.argument == argument;
+  }
+
+  @override
+  int get hashCode {
+    return argument.hashCode;
+  }
+}
+
+String _$pokemonHash() => r'd9d473f5b863e146bb42367380527d9882198f9f';
+
+final class PokemonFamily extends $Family
+    with $FunctionalFamilyOverride<FutureOr<String>, int> {
+  PokemonFamily._()
+    : super(
+        retry: null,
+        name: r'pokemonProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: false,
+      );
+
+  PokemonProvider call(int pokemondId) =>
+      PokemonProvider._(argument: pokemondId, from: this);
+
+  @override
+  String toString() => r'pokemonProvider';
+}
